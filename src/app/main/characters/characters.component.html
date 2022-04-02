@@ -1,0 +1,13 @@
+<div class="card-columns">
+  <div class="card animate__animated animate__fadeIn animate__faster shadow-sm" *ngFor="let item of characters">
+    <img [src]="item.image" class="card-img-top" [alt]="item.name" (click)="viewDetails(item)">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">Especie: {{ item.species }}</p>
+      <p class="card-text">Género: {{ item.gender }}</p>
+    </div>
+  </div>
+
+<button id="up" class="btn btn-dark animate__animated animate__fadeIn" (click)="onScrollTop()" *ngIf="showGoUpButton">⬆️</button>
+
+</div>
