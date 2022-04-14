@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RickandmortyService } from '../../services/rickandmorty.service';
 
 @Component({
@@ -6,12 +6,11 @@ import { RickandmortyService } from '../../services/rickandmorty.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor( private rmSvc: RickandmortyService ) { }
 
-  ngOnInit(): void {
+  goToHome() {
+    this.rmSvc.goToHome();
   }
-
-  goToHome() { this.rmSvc.goToHome(); }
 }

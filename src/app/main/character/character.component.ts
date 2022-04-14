@@ -16,13 +16,16 @@ export class CharacterComponent implements OnInit {
   constructor( private aRoute: ActivatedRoute, private rmSvc: RickandmortyService, private router: Router ) { }
 
   ngOnInit(): void {
+    // this.aRoute.params.subscribe( ({id}) => {
+    //   this.rmSvc.getById(id).subscribe( resp => {
+    //     this.character = resp;
+    //   })
+    // })
     this.aRoute.params
       .pipe(
         switchMap( ({ id } ) => this.rmSvc.getById( id ) )
       ).subscribe( resp => {
-        this.character = resp;
-      }, err => {
-        this.router.navigate(['characters-list'])
+        this.character = resp as Character;
       });
   }
 

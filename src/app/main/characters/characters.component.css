@@ -12,6 +12,16 @@
   align-items: center;
 }
 
-img {
+.card {
   cursor: pointer;
+}
+
+.card:hover {
+  opacity: .8 !important;
+}
+
+.card-img-top {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }

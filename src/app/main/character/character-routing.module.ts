@@ -5,7 +5,7 @@ import { CharacterComponent } from './character.component';
 
 const routes: Routes = [
   { path: '', component: CharacterComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'characters-list' }
 ];
 
 @NgModule({

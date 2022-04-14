@@ -7,6 +7,7 @@
     "test": "jest",
     "test-watch": "jest --watchAll",
     "test-coverage": "jest --coverage",
+    "test-errors": "jest --detectOpenHandles",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },

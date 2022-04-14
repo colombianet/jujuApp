@@ -1,6 +1,6 @@
 <div class="card-columns">
-  <div class="card animate__animated animate__fadeIn animate__faster shadow-sm" *ngFor="let item of characters">
-    <img [src]="item.image" class="card-img-top" [alt]="item.name" (click)="viewDetails(item)">
+  <div (click)="viewDetails(item)" class="card animate__animated animate__fadeIn animate__faster shadow-sm" *ngFor="let item of characters">
+    <img [src]="item.image" class="card-img-top md-12 lg-6" [alt]="item.name">
     <div class="card-body">
       <h5 class="card-title">{{ item.name }}</h5>
       <p class="card-text">Especie: {{ item.species }}</p>

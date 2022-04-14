@@ -1,0 +1,16 @@
+.btn-sm {
+  margin-bottom: 10px;
+}
+
+.img-card {
+  display: flex !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  .col p {
+    font-size: .8rem !important;
+    line-height: normal !important;
+  }
+}
